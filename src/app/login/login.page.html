@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-subtitle>
+        Login Credential<br />
+        Email: {{userDetails[0].email}}
+        password: {{userDetails[0].password}}
+      </ion-card-subtitle>
+      <br />
+      <form [formGroup]="userForm">
+        <ion-item>
+          <ion-input formControlName="email" labelPlacement="floating" label="Email" placeholder="Enter Email">
+          </ion-input>
+        </ion-item>
+        <ion-text style="color: red;float:right"
+          *ngIf="userForm.get('email')?.touched && userForm.get('email')?.hasError('required')">Required</ion-text>
+        <ion-text style="color: red;float:right"
+          *ngIf="userForm.get('email')?.touched && userForm.get('email')?.hasError('email')">Invalid Email</ion-text>
+        <br />
+        <ion-item>
+          <ion-input formControlName="password" labelPlacement="floating" label="Password" type="password"
+            placeholder="Enter Password"></ion-input>
+        </ion-item>
+        <ion-text style="color: red;float:right"
+          *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('required')">Required
+        </ion-text>
+        <ion-text style="color: red;float:right"
+          *ngIf="userForm.get('password')?.touched && userForm.get('password')?.hasError('minlength')">Should have
+          Minimum 6 letter</ion-text>
+
+        <br />
+      </form>
+      <ion-row style="float: right;">
+        <ion-button type="submit" item-end color="primary" (click)="login()">Submit</ion-button>
+      </ion-row>
+      <br /><br />
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-row>
+      <ion-col>
+    <ion-title>
+      Camera/File Explorer
+    </ion-title>
+  </ion-col>
+  <ion-col>
+    <ion-button color="light" fill="clear" style="float: right;" size="small" (click)="logOut()"> Logout</ion-button>
+  </ion-col>
+  </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Camera</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Invoking Child images component to Show the list of images -->
+  <app-images #imagesCmp></app-images>
+</ion-content>
+
+<!-- Action buttons displayed in footer section -->
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" color="primary" (click)="imagesCmp.captureImage()">Capture</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" color="primary" fill="outline" (click)="browseFiles()">Browse</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

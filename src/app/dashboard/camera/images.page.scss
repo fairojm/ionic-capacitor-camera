@@ -1,0 +1,24 @@
+ion-row {
+    width: 100%;justify-content: space-around;
+}
+ion-col {
+    min-width: 10em;
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  
+  .container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #c15a5a;
+    margin: 0;
+  }
+  

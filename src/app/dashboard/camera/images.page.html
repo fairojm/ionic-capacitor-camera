@@ -1,0 +1,20 @@
+  <ion-card *ngIf="capturedImgs && capturedImgs.length > 0; else infoMsg">
+    <ion-card-header class="ion-padding">
+      <ion-card-subtitle> Captured images </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+  <ion-row>
+    <ion-col  wrap *ngFor="let item of capturedImgs">
+       <ion-img ionImgViewer  scheme="dark"  [src]="item" style="width: 100%;height: 100%;"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+  </ion-card>
+  <ng-template #infoMsg>
+  <div class="container" >
+    <p>Press below button to start capturing images</p>
+  </div>
+</ng-template>
+
+
+

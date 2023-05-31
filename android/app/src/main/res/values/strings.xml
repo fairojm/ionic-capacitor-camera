@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ionic capacitor camera</string>
+    <string name="title_activity_main">ionic-camera</string>
+    <string name="package_name">com.fairoj.ionicCamera</string>
+    <string name="custom_url_scheme">io.ionic.starter</string>
+</resources>
