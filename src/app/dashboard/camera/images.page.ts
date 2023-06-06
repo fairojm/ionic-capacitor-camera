@@ -17,7 +17,8 @@ export class ImagesPage {
       const image = await Camera.getPhoto({
         quality: 90,
         source: CameraSource.Camera,
-        resultType: CameraResultType.Uri
+        resultType: CameraResultType.Uri,
+        saveToGallery: true
       });
     
       // image.webPath will contain a path that can be set as an image src.
